@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TITRE ET FAVICON MODERNE -->
     <title>Enzo Ernoux | Marketing Leader</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 stroke=%22%2300a8e8%22 stroke-width=%2210%22 fill=%22none%22 /><circle cx=%2250%22 cy=%2250%22 r=%2215%22 fill=%22%2300a8e8%22 /></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 stroke=%22%2300a8e8%22 stroke-width=%2210%22 fill=%22none%22 /><circle cx=%2250%22 cy=%2250%22 r=%2215%22 fill=%22%2300a8e8%22 /></svg>">
+
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --primary: #003d5b;
@@ -19,10 +24,11 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--light); color: var(--text); line-height: 1.6; }
 
+        /* HEADER ANIMÉ */
         header {
             background: var(--primary);
             color: white;
-            padding: 120px 20px 160px;
+            padding: 100px 20px 140px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -43,24 +49,24 @@
         }
 
         .profile-img {
-            width: 180px; height: 180px;
+            width: 170px; height: 170px;
             border-radius: 50%;
             border: 4px solid var(--accent);
             position: relative; z-index: 2;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             object-fit: cover;
             box-shadow: 0 10px 40px rgba(0,0,0,0.4);
         }
 
-        h1 { font-size: 3.5rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 700; position: relative; z-index: 2; line-height: 1.1; }
-        .subtitle { font-size: 1.4rem; font-weight: 300; letter-spacing: 2px; opacity: 0.9; position: relative; z-index: 2; margin-top: 10px; }
+        h1 { font-size: 3.2rem; letter-spacing: 5px; text-transform: uppercase; font-weight: 700; position: relative; z-index: 2; line-height: 1.1; }
+        .subtitle { font-size: 1.3rem; font-weight: 300; letter-spacing: 2px; opacity: 0.9; position: relative; z-index: 2; margin-top: 10px; }
 
         /* METRICS */
         .metrics-container {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            margin: -80px auto 40px;
+            gap: 20px;
+            margin: -60px auto 50px;
             padding: 0 20px;
             flex-wrap: wrap;
             position: relative; z-index: 10;
@@ -68,7 +74,7 @@
 
         .metric-card {
             background: var(--white);
-            padding: 35px 25px;
+            padding: 35px 20px;
             border-radius: 15px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             text-align: center;
@@ -78,10 +84,10 @@
             transition: 0.3s;
         }
         .metric-card:hover { transform: translateY(-5px); }
-        .metric-card h3 { font-size: 2.2rem; color: var(--primary); margin-bottom: 8px; }
-        .metric-card p { font-size: 0.8rem; text-transform: uppercase; color: #666; font-weight: 600; letter-spacing: 1px; }
+        .metric-card h3 { font-size: 2.1rem; color: var(--primary); margin-bottom: 5px; }
+        .metric-card p { font-size: 0.75rem; text-transform: uppercase; color: #666; font-weight: 600; letter-spacing: 1px; }
 
-        /* SECTION VISION (PARAGRAPHE FLUIDE) */
+        /* SECTION VISION */
         .vision-section {
             background: var(--white);
             max-width: 900px;
@@ -90,27 +96,26 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             border-left: 6px solid var(--accent);
-            text-align: left;
         }
-        .vision-section h2 { margin-bottom: 20px; }
+        .vision-section h2 { margin-bottom: 20px; text-transform: uppercase; font-size: 1.5rem; }
         .vision-section p { font-size: 1.1rem; color: #444; line-height: 1.8; font-weight: 300; }
         .highlight { color: var(--primary); font-weight: 600; }
 
         section { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
-        h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; position: relative; padding-bottom: 15px; }
-        h2::after { content: ''; width: 80px; height: 5px; background: var(--accent); position: absolute; bottom: 0; left: 0; }
+        h2 { font-size: 2rem; color: var(--primary); margin-bottom: 40px; position: relative; padding-bottom: 15px; text-transform: uppercase; }
+        h2::after { content: ''; width: 70px; height: 5px; background: var(--accent); position: absolute; bottom: 0; left: 0; }
 
-        /* DIPLÔMES ET LANGUES (GRID) */
-        .info-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; margin-bottom: 50px; }
-        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .edu-item { display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start; }
+        /* DIPLÔMES ET LANGUES */
+        .info-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; margin-bottom: 60px; }
+        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .edu-item { display: flex; gap: 20px; margin-bottom: 25px; align-items: flex-start; }
         .edu-icon { color: var(--accent); font-size: 1.3rem; background: #f0faff; padding: 12px; border-radius: 10px; }
-        .edu-info h4 { font-size: 0.95rem; color: var(--primary); font-weight: 600; }
+        .edu-info h4 { font-size: 1rem; color: var(--primary); font-weight: 600; }
         .edu-info p { font-size: 0.85rem; color: #777; }
 
-        .lang-card { background: var(--primary); color: white; padding: 30px; border-radius: 15px; }
+        .lang-card { background: var(--primary); color: white; padding: 35px; border-radius: 20px; }
         .lang-item { margin-bottom: 20px; }
-        .lang-header { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 8px; }
+        .lang-header { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 10px; }
         .lang-bar { width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; }
         .lang-fill { height: 100%; background: var(--accent); border-radius: 5px; }
 
@@ -123,8 +128,8 @@
             border-left: 8px solid var(--primary);
             box-shadow: 0 8px 25px rgba(0,0,0,0.05);
         }
-        .exp-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .exp-tag { background: var(--primary); color: white; padding: 6px 15px; border-radius: 25px; font-size: 0.8rem; font-weight: bold; }
+        .exp-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .exp-tag { background: var(--primary); color: white; padding: 5px 15px; border-radius: 25px; font-size: 0.75rem; font-weight: bold; }
         .exp-company { color: var(--accent); font-weight: 700; font-size: 1.1rem; margin-bottom: 20px; display: block; }
         
         ul { list-style: none; }
@@ -132,12 +137,11 @@
         li::before { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent); }
 
         /* COMPÉTENCES & OUTILS */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 50px; }
         .skill-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--accent); }
         .skill-card h3 { color: var(--primary); margin-bottom: 20px; font-size: 1.3rem; display: flex; align-items: center; gap: 15px; }
         .skill-card h3 i { background: var(--light); padding: 10px; border-radius: 10px; color: var(--accent); }
 
-        /* OUTILS STACK */
         .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
         .tool-category { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
         .tool-category h4 { color: var(--primary); font-size: 1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
@@ -150,9 +154,9 @@
         .social-links a:hover { color: var(--accent); transform: translateY(-10px); }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
+            h1 { font-size: 2.4rem; }
             .info-grid { grid-template-columns: 1fr; }
-            .vision-section { padding: 30px 20px; }
+            .vision-section { padding: 30px; }
         }
     </style>
 </head>
@@ -179,7 +183,7 @@
         </div>
     </div>
 
-    <!-- SECTION VISION FLUIDE -->
+    <!-- SECTION VISION -->
     <div style="padding: 0 20px;">
         <div class="vision-section">
             <h2>Ma Vision</h2>
@@ -215,7 +219,7 @@
             <ul>
                 <li><strong>Influence régionale :</strong> Référent Marketing IDF, garant de la stratégie sur le Marché Grand Public.</li>
                 <li><strong>Innovation :</strong> Développement d'outils de professionnalisation et pilotage de campagnes digitales B2C à fort ROI.</li>
-                <li><strong>Analyse décisionnelle :</strong> Pilotage des KPIs de performance et recommandations pour les directions opérationnelles.</li>
+                <li><strong>Analyse décisionnelle :</strong> Pilotage des KPIs de performance et recommandations stratégiques pour les directions opérationnelles.</li>
             </ul>
         </div>
     </section>
@@ -286,7 +290,6 @@
             </div>
         </div>
 
-        <!-- SECTION OUTILS & STACK TECHNIQUE -->
         <h2>Outils & Méthodes</h2>
         <div class="tools-grid">
             <div class="tool-category">
@@ -315,7 +318,7 @@
             <a href="https://linkedin.com/in/enzo-ernoux" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="tel:0686563188"><i class="fas fa-phone-alt"></i></a>
         </div>
-        <p style="opacity: 0.4; font-size: 0.8rem; margin-top: 20px;">© 2024 ENZO ERNOUX - STRATEGIC LEADERSHIP PROFILE</p>
+        <p style="opacity: 0.4; font-size: 0.8rem; margin-top: 25px;">© 2024 ENZO ERNOUX - STRATEGIC LEADERSHIP PROFILE</p>
     </footer>
 
 </body>
