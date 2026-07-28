@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo Ernoux | Marketing Stratégique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #003d5b;
+            --accent-blue: #0077b6;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+
+        /* Header / Hero Section */
+<header>
+    <img src="photo.jpg" alt="Enzo Ernoux" style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent-blue); margin-bottom: 20px; object-fit: cover;">
+    <h1 class="hero-title" style="font-size: 3rem;">Enzo Ernoux</h1>
+    <p class="hero-subtitle">Marketing stratégique & développement d’offre</p>
+</header>
+
+        .hero-title { font-size: 4rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; opacity: 0; transform: translateY(20px); animation: fadeInUp 1s forwards; }
+        .hero-subtitle { font-size: 1.5rem; font-style: italic; font-weight: 300; opacity: 0; animation: fadeInUp 1s 0.5s forwards; }
+
+        /* Key Metrics Section (L'aspect Business) */
+        .metrics {
+            display: flex;
+            justify-content: space-around;
+            background: var(--white);
+            padding: 50px 10%;
+            margin-top: -50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .metric-item { text-align: center; }
+        .metric-number { display: block; font-size: 2.5rem; font-weight: bold; color: var(--accent-blue); }
+        .metric-label { font-size: 0.9rem; color: #666; text-transform: uppercase; }
+
+        /* Sections */
+        section { padding: 80px 15%; }
+        h2 { border-left: 5px solid var(--accent-blue); padding-left: 15px; margin-bottom: 40px; text-transform: uppercase; color: var(--primary-blue); }
+
+        /* Experience Timeline */
+        .timeline { border-left: 2px solid var(--accent-blue); padding-left: 30px; position: relative; }
+        .exp-card { background: white; padding: 25px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative; }
+        .exp-card::before { content: ""; width: 15px; height: 15px; background: var(--accent-blue); position: absolute; left: -39px; top: 30px; border-radius: 50%; }
+        .exp-date { font-weight: bold; color: var(--accent-blue); }
+        .exp-company { font-style: italic; margin-bottom: 15px; display: block; }
+        ul { list-style-type: none; }
+        li { margin-bottom: 8px; position: relative; padding-left: 20px; }
+        li::before { content: "▹"; position: absolute; left: 0; color: var(--accent-blue); }
+
+        /* Skills Grid */
+        .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .skill-box { background: var(--primary-blue); color: white; padding: 20px; border-radius: 8px; transition: transform 0.3s; }
+        .skill-box:hover { transform: scale(1.05); }
+
+        /* Contact & Footer */
+        footer { background: var(--primary-blue); color: white; text-align: center; padding: 50px; }
+        .contact-links a { color: white; font-size: 1.5rem; margin: 0 15px; text-decoration: none; opacity: 0.8; }
+        .contact-links a:hover { opacity: 1; }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .metrics { flex-direction: column; gap: 30px; width: 90%; }
+            section { padding: 50px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="hero-title">Enzo Ernoux</h1>
+        <p class="hero-subtitle">Marketing stratégique & développement d’offre</p>
+    </header>
+
+    <div class="metrics">
+        <div class="metric-item">
+            <span class="metric-number">+30</span>
+            <span class="metric-label">Collections lancées</span>
+        </div>
+        <div class="metric-item">
+            <span class="metric-number">Millions</span>
+            <span class="metric-label">de CA générés</span>
+        </div>
+        <div class="metric-item">
+            <span class="metric-number">+50m</span>
+            <span class="metric-label">de linéaires déployés</span>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Chargé de projet marketing spécialisé en développement et pilotage d'offres produits, avec une forte orientation business. De l'étude de marché au déploiement en linéaire, j'accompagne la croissance des marques sur des marchés B2B et B2C.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Expériences professionnelles</h2>
+        
+        <div class="timeline">
+            <div class="exp-card">
+                <span class="exp-date">2023 – Présent</span>
+                <h3>Chargé de projet marketing stratégique & développement de l'offre</h3>
+                <span class="exp-company">CMP | Le Blanc-Mesnil</span>
+                <ul>
+                    <li>Développement de +30 collections (High-tech, cosmétique, art de la table...)</li>
+                    <li>Définition de positionnements prix / cible / promesse</li>
+                    <li>Conception d’offres linéaires clés en main</li>
+                    <li>Coordination marketing, achats et commerce</li>
+                </ul>
+            </div>
+
+            <div class="exp-card">
+                <span class="exp-date">2020 – 2023</span>
+                <h3>Alternant – Appui marketing & vente</h3>
+                <span class="exp-company">GRDF | La Défense</span>
+                <ul>
+                    <li>Référent marketing IDF – Marché Grand Public</li>
+                    <li>Création d'outils de professionnalisation (gaz vert)</li>
+                    <li>Analyses de performance des actions marketing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Expertises</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Marketing Produit</h3>
+                <p>Pilotage d'offres, lancement B2B/B2C, Branding packaging.</p>
+            </div>
+            <div class="skill-box">
+                <h3>Analyse & Stratégie</h3>
+                <p>Veille concurrentielle, rationalisation de portefeuille, recommandations.</p>
+            </div>
+            <div class="skill-box">
+                <h3>Gestion de projet</h3>
+                <p>Coordination transversale, analyse de performance KPI.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>On travaille ensemble ?</h2>
+        <p style="margin-bottom: 20px;">Basé à Courtry (77) - Mobile sur toute l'IDF</p>
+        <div class="contact-links">
+            <a href="mailto:ernoux@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:0686563188"><i class="fas fa-phone"></i></a>
+            <a href="https://linkedin.com/in/enzo-ernoux" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.5;">&copy; 2024 Enzo Ernoux - Profil Stratégique</p>
+    </footer>
+
+</body>
+</html>
