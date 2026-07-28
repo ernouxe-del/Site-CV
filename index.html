@@ -4,112 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enzo Ernoux | Marketing Strategist</title>
-    <!-- Importation d'une police moderne (Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #003d5b; /* Ton bleu du CV */
+            --primary: #003d5b;
             --accent: #00a8e8;
             --text: #2d3436;
-            --light: #f9f9f9;
+            --light: #f4f7f6;
             --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--light); color: var(--text); line-height: 1.6; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-        /* HEADER PREMIUM */
+        /* HEADER AVEC ANIMATION DE LUMIÈRE */
         header {
-            background: linear-gradient(135deg, #001d2e 0%, #003d5b 100%);
+            position: relative;
+            height: 80vh;
+            background: var(--primary);
             color: white;
-            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); /* Coupe moderne en bas */
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        /* Effet de lumière animée en fond */
+        header::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,168,232,0.15) 0%, rgba(0,61,91,0) 70%);
+            top: -50%;
+            left: -50%;
+            animation: rotateLight 15s linear infinite;
+        }
+
+        @keyframes rotateLight {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .profile-container {
+            position: relative;
+            z-index: 2;
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             border: 4px solid var(--accent);
             margin-bottom: 20px;
             object-fit: cover;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 0 30px rgba(0,168,232,0.4);
+            animation: float 4s ease-in-out infinite;
         }
 
-        h1 { font-size: 3.5rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; }
-        .subtitle { font-size: 1.4rem; font-weight: 300; letter-spacing: 2px; opacity: 0.9; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
 
-        /* CHIFFRES CLÉS (METRICS) */
+        h1 { font-size: 3.5rem; letter-spacing: 5px; text-transform: uppercase; font-weight: 700; position: relative; z-index: 2; }
+        .subtitle { font-size: 1.3rem; font-weight: 300; letter-spacing: 2px; opacity: 0.9; position: relative; z-index: 2; }
+
+        /* METRICS */
         .metrics-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: -80px;
+            gap: 25px;
+            margin: -60px auto 0;
             padding: 0 20px;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 10;
         }
 
         .metric-card {
             background: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
-            min-width: 250px;
-            transition: transform 0.3s;
+            min-width: 220px;
+            border-bottom: 4px solid var(--accent);
         }
-        .metric-card:hover { transform: translateY(-10px); }
-        .metric-card h3 { font-size: 2.5rem; color: var(--primary); margin-bottom: 5px; }
-        .metric-card p { text-transform: uppercase; font-size: 0.8rem; color: #666; font-weight: 600; letter-spacing: 1px; }
+
+        .metric-card h3 { font-size: 2.2rem; color: var(--primary); }
+        .metric-card p { font-size: 0.75rem; text-transform: uppercase; color: #777; font-weight: 600; }
 
         /* SECTIONS */
         section { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
-        h2 { font-size: 2rem; color: var(--primary); margin-bottom: 40px; position: relative; display: inline-block; }
-        h2::after { content: ''; width: 50%; height: 4px; background: var(--accent); position: absolute; bottom: -10px; left: 0; }
+        h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 40px; display: flex; align-items: center; gap: 15px; }
+        h2 i { color: var(--accent); }
+
+        /* DIPLÔMES ET LANGUES (GRID) */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .edu-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .edu-icon { font-size: 1.5rem; color: var(--accent); background: #eef9ff; padding: 15px; border-radius: 10px; }
+        .edu-info h4 { font-size: 1rem; color: var(--primary); }
+        .edu-info p { font-size: 0.85rem; color: #666; }
+
+        /* LANGUES */
+        .lang-card {
+            background: var(--primary);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            height: fit-content;
+        }
+        .lang-item { margin-bottom: 20px; }
+        .lang-name { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
+        .lang-bar { width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; }
+        .lang-progress { height: 100%; background: var(--accent); border-radius: 5px; }
 
         /* EXPÉRIENCES */
         .experience-item {
             background: var(--white);
-            padding: 40px;
+            padding: 30px;
             border-radius: 15px;
-            margin-bottom: 30px;
-            border-left: 6px solid var(--primary);
+            margin-bottom: 25px;
+            border-left: 5px solid var(--accent);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; }
-        .exp-title h3 { font-size: 1.3rem; color: var(--primary); }
-        .exp-company { color: var(--accent); font-weight: 600; }
-        .exp-date { background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+        .exp-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
+        .exp-company { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+        .exp-date { font-size: 0.8rem; font-weight: bold; color: #999; }
 
-        ul { list-style: none; margin-top: 15px; }
-        li { margin-bottom: 12px; padding-left: 25px; position: relative; }
-        li::before { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent); }
-
-        /* COMPETENCES */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .skill-card { background: var(--primary); color: white; padding: 30px; border-radius: 15px; text-align: center; }
-        .skill-card i { font-size: 2.5rem; margin-bottom: 15px; color: var(--accent); }
+        ul { list-style: none; margin-top: 10px; }
+        li { margin-bottom: 8px; padding-left: 20px; position: relative; font-size: 0.9rem; }
+        li::before { content: "•"; color: var(--accent); position: absolute; left: 0; font-weight: bold; }
 
         /* FOOTER */
-        footer { background: #001d2e; color: white; padding: 80px 20px; text-align: center; }
-        .social-links a { color: white; font-size: 2.5rem; margin: 0 20px; transition: 0.3s; }
-        .social-links a:hover { color: var(--accent); }
+        footer { background: #001d2e; color: white; padding: 60px 20px; text-align: center; }
+        .social-links a { color: white; font-size: 2rem; margin: 0 15px; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent); transform: scale(1.1); display: inline-block; }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
             h1 { font-size: 2.2rem; }
-            .metric-card { width: 100%; }
-            .exp-header { flex-direction: column; }
+            header { height: 70vh; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="photo.jpg" alt="Enzo Ernoux" class="profile-img">
+        <div class="profile-container">
+            <img src="photo.jpg" alt="Enzo Ernoux" class="profile-img">
+        </div>
         <h1>Enzo Ernoux</h1>
         <p class="subtitle">Marketing stratégique & développement d'offre</p>
     </header>
@@ -117,86 +181,110 @@
     <div class="metrics-container">
         <div class="metric-card">
             <h3>+30</h3>
-            <p>Collections lancées (B2B & B2C)</p>
+            <p>Collections lancées</p>
         </div>
         <div class="metric-card">
             <h3>Millions</h3>
-            <p>de CA générés pour mes clients</p>
+            <p>de CA générés</p>
         </div>
         <div class="metric-card">
             <h3>+50m</h3>
-            <p>de linéaires déployés en retail</p>
+            <p>de linéaires déployés</p>
         </div>
     </div>
 
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p style="font-size: 1.2rem; font-weight: 300;">
-            Expert en pilotage d'offres produits avec une forte orientation business. 
-            Ma force ? Transformer une étude de marché en un succès commercial concret, 
-            de la conception à la mise en rayon.
-        </p>
+    <section id="education-languages">
+        <div class="info-grid">
+            <!-- COLONNE DIPLÔMES -->
+            <div>
+                <h2><i class="fas fa-graduation-cap"></i> Diplômes</h2>
+                
+                <div class="edu-item">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <div class="edu-info">
+                        <h4>Mastère Management & Stratégie Digitale</h4>
+                        <p>Icadémie, Paris | 2021 – 2023</p>
+                    </div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="edu-info">
+                        <h4>Bachelor Marketing et Vente option E-commerce</h4>
+                        <p>Icadémie, Paris | 2020 – 2021</p>
+                    </div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-icon"><i class="fas fa-cogs"></i></div>
+                    <div class="edu-info">
+                        <h4>BTS Conception & Réalisation de Système Automatique</h4>
+                        <p>Lycée Pierre de Coubertin, Meaux | 2018 – 2019</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLONNE LANGUES -->
+            <div>
+                <h2><i class="fas fa-globe"></i> Langues</h2>
+                <div class="lang-card">
+                    <div class="lang-item">
+                        <div class="lang-name"><span>Français</span> <span>Natif</span></div>
+                        <div class="lang-bar"><div class="lang-progress" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-name"><span>Anglais</span> <span>C1</span></div>
+                        <div class="lang-bar"><div class="lang-progress" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-name"><span>Japonais</span> <span>Notion</span></div>
+                        <div class="lang-bar"><div class="lang-progress" style="width: 25%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="experience">
-        <h2>Expériences Clés</h2>
+        <h2><i class="fas fa-briefcase"></i> Expériences Professionnelles</h2>
         
         <div class="experience-item">
             <div class="exp-header">
-                <div class="exp-title">
-                    <h3>Chargé de projet marketing stratégique</h3>
-                    <p class="exp-company">CMP | Le Blanc-Mesnil</p>
-                </div>
-                <span class="exp-date">2023 - PRÉSENT</span>
+                <h3>Chargé de projet marketing stratégique</h3>
+                <span class="exp-date">2023 – Présent</span>
             </div>
+            <p class="exp-company">CMP | Le Blanc-Mesnil</p>
             <ul>
-                <li>Développement de +30 collections multi-sectorielles (High-tech, beauté, cuisine).</li>
-                <li>Conception d’offres linéaires clés en main pour la grande distribution.</li>
-                <li>Analyse de performance et coordination des achats et du commerce.</li>
+                <li>Développement de +30 collections (High-tech, cosmétique, art de la table...).</li>
+                <li>Définition de positionnements prix / cible / promesse.</li>
+                <li>Conception d’offres linéaires clés en main, +50 mètres de linéaire déployés.</li>
+                <li>Coordination marketing, achats et commerce.</li>
             </ul>
         </div>
 
         <div class="experience-item">
             <div class="exp-header">
-                <div class="exp-title">
-                    <h3>Appui marketing & vente (Alternance)</h3>
-                    <p class="exp-company">GRDF | La Défense</p>
-                </div>
-                <span class="exp-date">2020 - 2023</span>
+                <h3>Alternant – Appui marketing & vente</h3>
+                <span class="exp-date">2020 – 2023</span>
             </div>
+            <p class="exp-company">GRDF | La Défense</p>
             <ul>
-                <li>Référent marketing IDF pour le Marché Grand Public.</li>
-                <li>Création d'outils de professionnalisation sur le gaz vert.</li>
-                <li>Pilotage de campagnes digitales B2C et analyses de KPI.</li>
+                <li>Référent marketing IDF – Marché Grand Public.</li>
+                <li>Création d’outils de professionnalisation (gaz vert).</li>
+                <li>Études de marché & campagnes digitales B2C.</li>
             </ul>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Mes Expertises</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fas fa-rocket"></i>
-                <h3>Marketing Produit</h3>
-                <p>Lancement de collections, Branding & Retail strategy.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-chart-pie"></i>
-                <h3>Stratégie & Data</h3>
-                <p>Veille concurrentielle & rationalisation de portefeuille.</p>
-            </div>
         </div>
     </section>
 
     <footer>
-        <h2 style="color: white; margin-bottom: 20px;">On collabore ?</h2>
-        <p style="margin-bottom: 40px; opacity: 0.8;">Basé à Courtry (77) - IDF</p>
+        <h2 style="color: white; justify-content: center; border: none;">Contactez-moi</h2>
+        <p style="margin-bottom: 30px; opacity: 0.7;">Basé à Courtry (77) - IDF</p>
         <div class="social-links">
-            <a href="mailto:ernoux@gmail.com"><i class="fas fa-envelope-square"></i></a>
+            <a href="mailto:ernoux@gmail.com"><i class="fas fa-envelope"></i></a>
             <a href="https://linkedin.com/in/enzo-ernoux" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="tel:0686563188"><i class="fas fa-phone-square"></i></a>
         </div>
-        <p style="margin-top: 60px; font-size: 0.7rem; opacity: 0.4;">© 2024 ENZO ERNOUX - STRATEGIST PROFILE</p>
+        <p style="margin-top: 50px; font-size: 0.7rem; opacity: 0.3;">© 2024 ENZO ERNOUX - STRATEGIST PROFILE</p>
     </footer>
 
 </body>
