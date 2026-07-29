@@ -55,6 +55,10 @@
             to { transform: rotate(360deg); }
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            header::before { animation: none; }
+        }
+
         .profile-img {
             width: 150px; height: 150px;
             border-radius: 50%;
@@ -259,7 +263,7 @@
                     <h2>Diplômes</h2>
                     <div class="edu-item">
                         <i class="fas fa-graduation-cap edu-icon"></i>
-                        <div class="edu-info"><h4>Mastère Management & Stratégie Digitale</h4><p>Icadémie, Paris | 2021 – 2023</p></div>
+                        <div class="edu-info"><h4>Mastère Management et Stratégie des Entreprises, option digital.</h4><p>Icadémie, Paris | 2021 – 2023</p></div>
                     </div>
                     <div class="edu-item">
                         <i class="fas fa-certificate edu-icon"></i>
@@ -294,7 +298,7 @@
             
             <article class="experience-item">
                 <div class="exp-head">
-                    <h3>Responsable de Projets Marketing & Offre</h3>
+                    <h3>Chargé de projet marketing stratégique & développement de l’offre</h3>
                     <span class="exp-tag">2023 - PRÉSENT</span>
                 </div>
                 <span style="color: var(--accent); font-weight: 700; display: block; margin-bottom: 15px;">CMP | Le Blanc-Mesnil</span>
@@ -362,7 +366,7 @@
     </main>
 
     <footer>
-        <p style="opacity: 0.4; font-size: 0.7rem;">© 2024 ENZO ERNOUX - STRATEGIC LEADERSHIP PROFILE</p>
+        <p style="opacity: 0.4; font-size: 0.7rem;">© 2026 ENZO ERNOUX - STRATEGIC LEADERSHIP PROFILE</p>
     </footer>
 
 </body>
