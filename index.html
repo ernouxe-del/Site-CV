@@ -22,7 +22,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--light); color: var(--text); line-height: 1.6; }
 
-        /* HEADER / BANNIÈRE */
+        /* BANNIÈRE HAUTE */
         header {
             background: var(--primary);
             color: white;
@@ -56,17 +56,15 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.4);
         }
 
-        h1 { font-size: 3rem; letter-spacing: 5px; text-transform: uppercase; font-weight: 700; position: relative; z-index: 2; }
-        .subtitle { font-size: 1.1rem; font-weight: 400; opacity: 0.9; position: relative; z-index: 2; margin-top: 5px; color: var(--accent); }
+        h1 { font-size: 2.8rem; letter-spacing: 5px; text-transform: uppercase; font-weight: 700; position: relative; z-index: 2; }
+        .subtitle { font-size: 1.1rem; font-weight: 400; opacity: 0.9; position: relative; z-index: 2; margin-top: 5px; color: var(--accent); max-width: 800px; margin-left: auto; margin-right: auto; }
         
-        .availability { font-size: 0.95rem; font-style: italic; margin-top: 15px; opacity: 0.8; position: relative; z-index: 2; font-weight: 300; }
+        .availability { font-size: 0.9rem; font-style: italic; margin-top: 15px; opacity: 0.8; position: relative; z-index: 2; font-weight: 300; }
 
-        /* CONTACT DANS LA BANNIÈRE */
-        .hero-contact { position: relative; z-index: 2; margin-top: 25px; display: flex; justify-content: center; gap: 20px; }
-        .hero-contact a { color: white; font-size: 1.5rem; transition: 0.3s; }
+        .hero-contact { position: relative; z-index: 2; margin-top: 25px; display: flex; justify-content: center; gap: 25px; }
+        .hero-contact a { color: white; font-size: 1.6rem; transition: 0.3s; }
         .hero-contact a:hover { color: var(--accent); transform: scale(1.1); }
 
-        /* BOUTON PDF */
         .btn-pdf {
             display: inline-block;
             margin-top: 30px;
@@ -84,7 +82,7 @@
         }
         .btn-pdf:hover { background: white; color: var(--primary); transform: translateY(-3px); }
 
-        /* METRICS */
+        /* CHIFFRES CLÉS */
         .metrics-container {
             display: flex;
             justify-content: center;
@@ -106,10 +104,10 @@
             border-bottom: 5px solid var(--accent);
         }
 
-        .metric-card h3 { font-size: 1.6rem; color: var(--primary); margin-bottom: 5px; line-height: 1.2; }
+        .metric-card h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 5px; line-height: 1.3; }
         .metric-card p { font-size: 0.7rem; text-transform: uppercase; color: #666; font-weight: 600; }
 
-        /* VISION SECTION */
+        /* VISION */
         .vision-section {
             background: var(--white);
             max-width: 900px;
@@ -119,23 +117,32 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             border-left: 6px solid var(--accent);
         }
-        .vision-section h2 { margin-bottom: 20px; text-transform: uppercase; font-size: 1.4rem; color: var(--primary); }
-        .vision-section p { font-size: 1.05rem; color: #444; line-height: 1.8; }
+        .vision-section h2 { margin-bottom: 15px; text-transform: uppercase; font-size: 1.4rem; color: var(--primary); }
+        .vision-section p { font-size: 1.05rem; color: #444; line-height: 1.8; font-weight: 300; }
 
         section { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
         h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 40px; position: relative; padding-bottom: 15px; text-transform: uppercase; }
         h2::after { content: ''; width: 60px; height: 5px; background: var(--accent); position: absolute; bottom: 0; left: 0; }
 
-        /* GRID INFO */
+        /* INFO GRID */
         .info-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; margin-bottom: 50px; }
-        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .edu-item { display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start; }
+        .edu-icon { color: var(--accent); font-size: 1.3rem; }
+        .edu-info h4 { font-size: 0.95rem; color: var(--primary); }
+
+        .lang-card { background: var(--primary); color: white; padding: 35px; border-radius: 20px; }
+        .lang-item { margin-bottom: 15px; }
+        .lang-header { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 8px; }
+        .lang-bar { width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; }
+        .lang-fill { height: 100%; background: var(--accent); border-radius: 5px; }
 
         /* EXPÉRIENCES */
         .experience-item {
             background: var(--white);
-            padding: 35px;
+            padding: 40px;
             border-radius: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             border-left: 5px solid var(--primary);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
@@ -146,16 +153,24 @@
         li { margin-bottom: 8px; padding-left: 25px; position: relative; font-size: 0.9rem; color: #444; }
         li::before { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent); }
 
-        /* SKILLS */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .skill-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--accent); }
+        /* SKILLS & OUTILS */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .skill-card { background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--accent); }
+        .skill-card h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; }
 
-        footer { background: #001d2e; color: white; padding: 40px 20px; text-align: center; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .tool-category { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        .tool-category h4 { color: var(--primary); font-size: 0.95rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .tool-category h4 i { color: var(--accent); }
+        .tool-category p { font-size: 0.8rem; color: #666; }
+
+        footer { background: #001d2e; color: white; padding: 60px 20px; text-align: center; }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
+            h1 { font-size: 1.8rem; }
             .info-grid { grid-template-columns: 1fr; }
-            .metric-card h3 { font-size: 1.3rem; }
+            .metric-card h3 { font-size: 1.2rem; }
+            .vision-section { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -174,7 +189,7 @@
         </div>
 
         <a href="cv-enzo-ernoux.pdf" download class="btn-pdf">
-            <i class="fas fa-file-pdf"></i> Télécharger mon CV
+            <i class="fas fa-file-pdf"></i> Télécharger mon CV (PDF)
         </a>
     </header>
 
@@ -202,6 +217,43 @@
         </div>
     </div>
 
+    <!-- DIPLOMES ET LANGUES -->
+    <section>
+        <div class="info-grid">
+            <div class="card">
+                <h2>Diplômes</h2>
+                <div class="edu-item">
+                    <i class="fas fa-graduation-cap edu-icon"></i>
+                    <div class="edu-info"><h4>Mastère Management & Stratégie Digitale</h4><p>Icadémie, Paris | 2021 – 2023</p></div>
+                </div>
+                <div class="edu-item">
+                    <i class="fas fa-certificate edu-icon"></i>
+                    <div class="edu-info"><h4>Bachelor Marketing et Vente option E-commerce</h4><p>Icadémie, Paris | 2020 – 2021</p></div>
+                </div>
+                <div class="edu-item">
+                    <i class="fas fa-microchip edu-icon"></i>
+                    <div class="edu-info"><h4>BTS Conception & Réalisation de Système Automatique</h4><p>Lycée Pierre de Coubertin, Meaux | 2018 – 2019</p></div>
+                </div>
+            </div>
+
+            <div class="lang-card">
+                <h2>Langues</h2>
+                <div class="lang-item">
+                    <div class="lang-header"><span>Français</span> <span>Natif</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 100%;"></div></div>
+                </div>
+                <div class="lang-item">
+                    <div class="lang-header"><span>Anglais</span> <span>C1</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="lang-item">
+                    <div class="lang-header"><span>Japonais</span> <span>Notion</span></div>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 25%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="experience">
         <h2>Expériences Stratégiques</h2>
         
@@ -214,7 +266,7 @@
             <ul>
                 <li><strong>Pilotage stratégique :</strong> Management du cycle de vie de +30 collections.</li>
                 <li><strong>Succès business (Branche Cuisine) :</strong> Orchestration de la refonte de l'offre générant une croissance de <strong>+27% du CA en 1 an</strong>.</li>
-                <li><strong>Leadership transverse :</strong> Coordination Achats, Design et Commerce.</li>
+                <li><strong>Leadership transverse :</strong> Coordination Achats, Design et Commerce pour garantir l'alignement de l'offre.</li>
                 <li><strong>Expertise Retail :</strong> plus de 50 mètres linéaires de concepts merchandising déployés à travers la France pour maximiser le sell-out.</li>
             </ul>
         </div>
@@ -227,31 +279,51 @@
             <span style="color: var(--accent); font-weight: 700; display: block; margin-bottom: 15px;">GRDF | La Défense</span>
             <ul>
                 <li><strong>Influence régionale :</strong> Référent Marketing IDF, garant de la stratégie Marché Grand Public.</li>
-                <li><strong>Innovation :</strong> Développement d'outils de professionnalisation et campagnes digitales.</li>
+                <li><strong>Innovation :</strong> Développement d'outils de professionnalisation et pilotage de campagnes digitales B2C.</li>
             </ul>
         </div>
     </section>
 
     <section id="competences">
         <h2>Expertises & Leadership</h2>
-        <div class="skills-grid">
+        <div class="skills-grid" style="margin-bottom: 60px;">
             <div class="skill-card">
                 <h3>Vision & Stratégie</h3>
-                <p style="font-size: 0.9rem;">Analyse prospective, mix-produit rentabilité, stratégie de marque.</p>
+                <p style="font-size: 0.9rem; color: #555;">Analyse de marché, mix-produit rentabilité, rationalisation de portefeuille et stratégie de marque.</p>
             </div>
             <div class="skill-card">
                 <h3>Management Transversal</h3>
-                <p style="font-size: 0.9rem;">Fédérer les experts Achats et Design vers un objectif business commun.</p>
+                <p style="font-size: 0.9rem; color: #555;">Orchestration des équipes pluridisciplinaires (Achats, Design, Commerce) vers des objectifs business.</p>
             </div>
             <div class="skill-card">
                 <h3>Pilotage Business</h3>
-                <p style="font-size: 0.9rem;">Reporting KPI, ROI, Merchandising et réseaux de vente B2B/B2C.</p>
+                <p style="font-size: 0.9rem; color: #555;">Reporting KPI, analyse de performance ROI, Branding Packaging et réseaux de vente B2B/B2C.</p>
+            </div>
+        </div>
+
+        <h2>Outils & Méthodes</h2>
+        <div class="tools-grid">
+            <div class="tool-category">
+                <h4><i class="fas fa-database"></i> Data & Analyse</h4>
+                <p>Excel Avancé (TCD, Modélisation), Reporting KPI, analyse de rentabilité produit.</p>
+            </div>
+            <div class="tool-category">
+                <h4><i class="fas fa-tasks"></i> Pilotage & Projet</h4>
+                <p>Notion, Outils collaboratifs Agiles, gestion des plannings de déploiement retail.</p>
+            </div>
+            <div class="tool-category">
+                <h4><i class="fas fa-search-dollar"></i> Veille & Marché</h4>
+                <p>Outils de veille concurrentielle multi-sectorielle, analyse des tendances de consommation.</p>
+            </div>
+            <div class="tool-category">
+                <h4><i class="fas fa-pencil-ruler"></i> Création & Retail</h4>
+                <p>Briefrage design, chartes graphiques packaging, conception de concepts merchandising.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p style="opacity: 0.5; font-size: 0.8rem;">© 2024 ENZO ERNOUX - STRATEGIC LEADERSHIP PROFILE</p>
+        <p style="opacity: 0.4; font-size: 0.7rem;">© 2024 ENZO ERNOUX - STRATEGIC LEADERSHIP PROFILE</p>
     </footer>
 
 </body>
