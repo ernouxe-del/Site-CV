@@ -179,7 +179,7 @@
         h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 40px; position: relative; padding-bottom: 15px; text-transform: uppercase; }
         h2::after { content: ''; width: 60px; height: 5px; background: var(--accent); position: absolute; bottom: 0; left: 0; }
 
-        /* INFO GRID (Diplômes / Langues) */
+        /* INFO GRID */
         .info-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 30px; margin-bottom: 50px; }
         .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .edu-item { display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start; }
@@ -210,7 +210,7 @@
         li { margin-bottom: 8px; padding-left: 25px; position: relative; font-size: 0.9rem; color: #444; }
         li::before { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent); }
 
-        /* SOFT SKILLS SECTION */
+        /* SOFT SKILLS */
         .soft-skills-container {
             display: flex;
             flex-wrap: wrap;
@@ -282,18 +282,18 @@
         
         <nav class="hero-contact" aria-label="Liens de contact">
             <a href="mailto:ernouxe@gmail.com" aria-label="Email">
-                <i class="fas fa-envelope"></i> ernouxe@gmail.com
+                <i class="fas fa-envelope" aria-hidden="true"></i> ernouxe@gmail.com
             </a>
             <a href="https://www.linkedin.com/in/enzo-ernoux-638b151ab/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i> LinkedIn
+                <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
             </a>
             <a href="tel:+33686563188" aria-label="Téléphone">
-                <i class="fas fa-phone"></i> +33 6 86 56 31 88
+                <i class="fas fa-phone" aria-hidden="true"></i> +33 6 86 56 31 88
             </a>
         </nav>
 
         <a href="CV_Enzo_Ernoux.pdf" download="CV_Enzo_Ernoux.pdf" class="btn-pdf" aria-label="Télécharger le CV PDF">
-            <i class="fas fa-file-pdf"></i> Télécharger mon CV (PDF)
+            <i class="fas fa-file-pdf" aria-hidden="true"></i> Télécharger mon CV (PDF)
         </a>
     </header>
 
@@ -349,6 +349,10 @@
                     <div class="lang-item">
                         <div class="lang-header"><span>Anglais</span> <span>C1</span></div>
                         <div class="lang-bar"><div class="lang-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-header"><span>Italien</span> <span>A1</span></div>
+                        <div class="lang-bar"><div class="lang-fill" style="width: 20%;"></div></div>
                     </div>
                     <div class="lang-item">
                         <div class="lang-header"><span>Japonais</span> <span>Notions</span></div>
@@ -408,7 +412,6 @@
                 </div>
             </div>
 
-            <!-- SECTION SOFT SKILLS INTÉGRÉE -->
             <div style="margin-top: 40px;">
                 <h2 style="font-size: 1.4rem; border: none; padding: 0;">Qualités Personnelles (Soft Skills)</h2>
                 <div class="soft-skills-container">
@@ -424,25 +427,24 @@
             <h2 style="margin-top: 60px;">Outils & Méthodes</h2>
             <div class="tools-grid">
                 <div class="tool-category">
-                    <h4><i class="fas fa-database" aria-hidden="true"></i> Data & Analyse</h4>
+                    <h4><i class="fas fa-database"></i> Data & Analyse</h4>
                     <p>Excel Avancé (TCD, Modélisation), Reporting KPI, analyse de rentabilité produit.</p>
                 </div>
                 <div class="tool-category">
-                    <h4><i class="fas fa-tasks" aria-hidden="true"></i> Pilotage & Projet</h4>
+                    <h4><i class="fas fa-tasks"></i> Pilotage & Projet</h4>
                     <p>Notion, Outils collaboratifs Agiles, gestion des plannings de déploiement retail.</p>
                 </div>
                 <div class="tool-category">
-                    <h4><i class="fas fa-search-dollar" aria-hidden="true"></i> Veille & Marché</h4>
+                    <h4><i class="fas fa-search-dollar"></i> Veille & Marché</h4>
                     <p>Outils de veille concurrentielle multi-sectorielle, analyse des tendances de consommation.</p>
                 </div>
                 <div class="tool-category">
-                    <h4><i class="fas fa-pencil-ruler" aria-hidden="true"></i> Création & Retail</h4>
+                    <h4><i class="fas fa-pencil-ruler"></i> Création & Retail</h4>
                     <p>Briefrage design, chartes graphiques packaging, conception de concepts merchandising.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION CENTRES D'INTÉRÊT -->
         <section id="interests">
             <h2>Centres d'intérêt</h2>
             <div class="interests-grid">
